@@ -2,7 +2,7 @@ module.exports = {
   NODE_ENV: '"production"',
   address: {
     base: '"https://testapi.acamy.cl/"',
-    api: '"https://api.corretaje.site"',
+    api: '"https://api.corretaje.site/"',
     spa: '"http://localhost:8080"',
     socket: '"http://localhost:6001"',
     apiBot: '"https://api.dialogflow.com/v1/"',
