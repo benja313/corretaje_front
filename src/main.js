@@ -27,9 +27,9 @@ Vue.http.interceptors.push(function (request, next) {
   request.headers.set('Accept', 'application/json')
   next(function (response) {
     // cambiar por ruta en el dominio
-    if (response.status === 401 && window.location.href !== 'http://corretaje.therameds.cl/#/login-page') {
+    if (response.status === 401 && window.location.href !== 'http://corretaje.site/#/login-page') {
       credentials.clearCredentials()
-      window.location.href = ('http://corretaje.therameds.cl/#/login-page')
+      window.location.href = ('http://corretaje.site/#/login-page')
     }
   })
 })
