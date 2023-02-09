@@ -272,7 +272,7 @@
                     text-center
                     class="mt-3"
                     card-plain
-                    :card-image="'http://127.0.0.1:8000/storage/gallery_products/' + destacadas.url"
+                    :card-image="'https://api.corretaje.site/storage/gallery_products/' + destacadas.url"
                     :shadow-normal="false"
                     :no-colored-shadow="false"
                     card-action
@@ -467,7 +467,7 @@ export default {
       let vm = this;
       for (var i = 0; i < imagenes.length; i++) {
         vm.images.push(
-          "http://127.0.0.1:8000/storage/gallery_products/" +
+          "https://api.corretaje.site/storage/gallery_products/" +
             imagenes[i].url
         );
         console.log(vm.images[i]);
