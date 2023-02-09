@@ -30,7 +30,7 @@
                   text-center
                   class="mt-3"
                   card-plain
-                  :card-image="'http://127.0.0.1:8000/storage/gallery_products/' + destacadas.url"
+                  :card-image="'https://api.corretaje.site/storage/gallery_products/' + destacadas.url"
                   :shadow-normal="false"
                   :no-colored-shadow="false"
                   card-action
@@ -65,7 +65,7 @@
                           {{destacadas.nombre_zona}}
                         </p>
                       </div>
-                      
+
                     </div>
                   </template>
                 </product-card>
@@ -123,7 +123,7 @@
                       <span class="price">{{ metrosConstruidosSlider }}
                         </span>
                     </template>
-                   
+
                     <template slot="md-collapse-pane-2" v-if="tipoMoneda == 'clp'">
                       <span class="price-content" >
                         <span class="price-left">
@@ -135,14 +135,14 @@
                           {{ Math.floor(this.maximos.maxCLP) }}
                         </span>
                       </span>
-                    
+
                       <input type="range" class="slider" id="myRange" v-model="precioSlider" :min="precioMinimo" :max="maximos.maxCLP" >
                          <md-radio v-model="tipoMoneda" value="clp">CLP</md-radio>
                         <md-radio v-model="tipoMoneda" value="uf">UF</md-radio>
                         <p class="text-center">{{precioSlider}}</p>
                     </template>
                     <template slot="md-collapse-pane-2" v-else>
-                      
+
                       <span class="price-content" >
                         <span class="price-left">
                           Min
@@ -165,7 +165,7 @@
                         v-for="region in regiones"
                         v-bind:key="region.nombre"
                         v-model="region.state"
-                        
+
                       >{{region.nombre}}</md-checkbox>
                     </template>
                     <template slot="md-collapse-pane-4">
@@ -174,7 +174,7 @@
                         class="mb-0"
                         v-for="comuna in comunas"
                         v-bind:key="comuna.nombre"
-                        
+
                       >{{comuna.nombre}}</md-checkbox>
                     </template>
                     <template slot="md-collapse-pane-5">
@@ -183,7 +183,7 @@
                         class="mb-0"
                         v-for="zona in zonas"
                         v-bind:key="zona.nombre"
-                        
+
                       >{{zona.nombre}}</md-checkbox>
                     </template>
                     <template slot="md-collapse-pane-6">
@@ -192,7 +192,7 @@
                         class="mb-0"
                         v-for="tipoPubli in tipoPublicacion"
                         v-bind:key="tipoPubli.nombre"
-                        
+
                       >{{tipoPubli.nombre}}</md-checkbox>
                     </template>
                   </collapse>
@@ -211,7 +211,7 @@
                   <h4 v-if="true">Puedes tu añadir nuevo contenido</h4>
                   <md-button to:="newPublication" class="md-info">Nueva Publicación</md-button>
                 </div>
-                
+
               </div>
             </div>
               <div class="md-layout-item md-size-80 md-small-size-100" v-else style="margin: auto;">
@@ -225,7 +225,7 @@
                       text-center
                       class="mt-3"
                       style="margin-top:5% !important;"
-                      :card-image="'http://127.0.0.1:8000/storage/gallery_products/' + item.url"
+                      :card-image="'https://api.corretaje.site/storage/gallery_products/' + item.url"
                       :shadow-off="true"
                     >
                       <template slot="cardContent">
@@ -259,7 +259,7 @@
                               {{item.nombre_zona}}
                             </p>
                           </div>
-                          
+
                         </div>
                       </template>
                       <template slot="cardPrice">
@@ -269,12 +269,12 @@
                           </p>
                         </div>
                       </template>
-                
+
                     </product-card>
                   </router-link>
                 </div>
 
-                
+
               </div>
               <div class="md-layout-item md-size-25 md-small-size-100 mx-auto">
                   <div id="progress-pagination">
@@ -373,7 +373,7 @@ export default {
     BlogCard,
     Slider,
     Badge,
-    Pagination, 
+    Pagination,
     filters: {
       capitalize: function(value) {
         if (!value) return "";
@@ -453,7 +453,7 @@ export default {
   },
   methods: {
     cambiarvalor(){
-      this.defaultPagination = 2 
+      this.defaultPagination = 2
     },
     cambiarPagina(){
       let vm = this
@@ -510,7 +510,7 @@ export default {
       })
         },1500)
       }
-      
+
     },
     suscribirse(){
       let vm = this
